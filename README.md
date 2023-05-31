@@ -39,7 +39,7 @@
 
 <br>
 
-# **ToDo**
+# **ToDo** ***(subject to change)***
 
 - ~~Learn nn*¹ basics.~~
 - ~~Get MNIST and CIFAR10 nn*¹ working.~~
