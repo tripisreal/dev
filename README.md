@@ -43,7 +43,7 @@
 
 - ~~Learn nn*¹ basics.~~
 - ~~Get MNIST and CIFAR10 nn*¹ working.~~
-- Figure out a use case for image recognition in a web developement project.
+- Figure out a use-case for image recognition in a web developement project. (optional)
 - Start some real projects with a team.
 - Get an internship.
 - Get a job at google. 👍
