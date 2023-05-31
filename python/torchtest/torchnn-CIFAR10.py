@@ -38,7 +38,7 @@ clf = ImageClassifier().to('cuda')
 with open('model_state-CIFAR10.pt', 'rb') as f:
     clf.load_state_dict(load(f))
 
-image_path = 'CIFAR10-images/img_2.jpg'
+image_path = 'CIFAR10-images/img_1.jpg'
 img = Image.open(image_path)
 
 img_tensor = transform(img).unsqueeze(0).to('cuda')
