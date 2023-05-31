@@ -1,0 +1,139 @@
+/* BASE STYLES */
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-dark);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid var(--clr-light);
+  }
+  
+  .item {
+    width: 150px;
+    height: 150px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 10px solid var(--clr-accent);
+    border-radius: 10px;
+  }
+  
+  /* END OF BASE STYLES */
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin-top: 500px;
+  }
+
+  .item-1 {
+    /* order: 1; */
+    /* writing-mode: vertical-lr; */
+    overflow: auto;
+    resize: both;
+  }
+
+  .item-3 {
+    /* flex-grow: 1; */
+    /* flex-shrink: 0; */
+    /* flex: 1; */
+    /* align-self: center; */
+    /* order: -1; */
+  }
+  
+  h1 {
+    padding-left: 50px;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(67,124,205), rgb(69, 214, 202));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    animation: fade 3s infinite;
+  }
+
+  @keyframes fade {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 100;
+    }
+    100%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 100;
+    }
+    0%{
+      opacity: 0;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    padding-left: 90%;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  h2 {
+    writing-mode: vertical-lr;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, rgb(67,124,205), rgb(69, 214, 202));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+  }
+
+  .fart {
+    justify-content: left;
+    align-items: center;
+  }
+
+  img {
+    padding: 50px;
+    padding-top: 200px;
+  }
+
+  .ph-even {
+    margin-left: 50%;
+  }
+  
+  .ph-odd {
+    margin-left: 10%;
+  }

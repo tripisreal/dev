@@ -1,0 +1,9 @@
+{
+    "discord.detailsEditing": "Working in {full_dir_name}",
+    "discord.detailsIdling": "Idling :)",
+    "discord.lowerDetailsEditing": "Edititing {file_name}",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "none"
+}
