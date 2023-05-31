@@ -17,7 +17,7 @@
 
 > just me testing torch as of writing this im using CIFAR10 and MNIST to learn the basics of pyTorch, once I move on to something more complicatedi'll probably make a \torch folder. (5/26/23)
 <br>
-**v0.1.3** *last updated on (5/25/23) started on (5/25/23)*
+__v0.1.3__ _last updated on (5/25/23) started on (5/25/23)_
 
 <br>
 
@@ -29,7 +29,7 @@
 
 > Currently just a small project i'm working on for learning some new front ent stuff currently just for testing but feel free to contribute any ideas.
 <br>
-**v0.0.6** *last updated on (5/25/23) started on (5/15/23)*
+__v0.0.6__ _last updated on (5/25/23) started on (5/15/23)_
 
 ### *\web\testing*
 
