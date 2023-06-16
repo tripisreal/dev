@@ -1,0 +1,381 @@
+:root {
+  --light-bg-color: linear-gradient(#f7f9ff, #d1d2d8);
+  --light-txt-color: #1c1d1f;
+  --light-highlight-color: #6fb7ff;
+  --light-nav-color: rgba(0, 0, 0, 0.1);
+  --light-icon-invert: ;
+
+  --dark-bg-color: linear-gradient(#353535, #000);
+  --dark-txt-color: #fffffa;
+  --dark-highlight-color: #6fb7ff;
+  --dark-nav-color: rgba(255, 255, 255, 0.1);
+  --dark-icon-invert: invert();
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-color: var(--light-bg-color);
+  --txt-color: var(--light-txt-color);
+  --highlight-color: var(--light-highlight-color);
+  --nav-color: var(--light-nav-color)
+  --icon-invert: var(--light-icon-invert)
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: var(--dark-bg-color);
+  --txt-color: var(--dark-txt-color);
+  --highlight-color: var(--dark-highlight-color);
+  --nav-color: var(--dark-nav-color)
+  --icon-invert: var(--dark-icon-invert)
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background: var(--bg-color);
+  font-family: 'Nunito', sans-serif;
+  padding: 100px 300px 0;
+  top: 0;
+}
+
+.title,
+.tagline,
+.section-header,
+.description,
+.description-odd {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--txt-color);
+
+}
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 225px;
+  animation: 0.5s ease-out slide-in-top forwards;
+}
+
+.tagline {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 50;
+  padding-top: -200px;
+  animation: 0.5s ease-out slide-in-bottom forwards;
+}
+
+.section-header {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 50;
+  padding-top: 500px;
+  animation: 0.5s ease-out slide-in-bottom forwards;
+  padding-bottom: 150px;
+}
+
+ul {
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  border-bottom: black solid 1px;
+  z-index: 3;
+  animation: 0.7s ease-out slide-in-top forwards;
+}
+
+ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav-color);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+li {
+  list-style-type: none;
+  font-size: 1.15rem;
+  float: right;
+}
+
+li a {
+  padding: 25px;
+  display: block;
+  color: var(--txt-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-content {
+  margin: 0 430px 0 290px;
+}
+
+img {
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.icon {
+  float: left;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert();
+}
+
+@keyframes text-color-fade {
+  from {
+    color: var(--txt-color);
+  }
+  to {
+    color: var(--highlight-color);
+  }
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translate(0, -3rem);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    transform: translate(0, 3rem);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.description,
+.description-odd {
+  font-weight: 100;
+  font-size: 40px;
+  padding-left: 0 75px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 0;
+}
+
+.about-me-item {
+  flex-direction: row;
+}
+
+.about-me-item img,
+.about-me-item .description {
+  flex: 1;
+}
+
+.section-header {
+  font-size: 50px;
+}
+
+#about-me {
+  scroll-behavior: smooth;
+  scroll-margin-top: -300px;
+}
+
+#title {
+  scroll-margin-top: 300px;
+}
+
+
+.about-me-sub-content {
+  text-align: center;
+  font-size: +26px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--txt-color);
+}
+
+.about-me-sub {
+  font-weight: 100;
+  padding: 20px;
+}
+
+.about-me img {
+  border-radius: 12px;
+}
+
+.projects h3, b {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--txt-color);
+}
+
+.project-container {
+  width: auto;
+  height: auto;
+  border: 1px solid var(--txt-color);
+  border-radius: 5px;
+  display: flex;
+  padding: 12px;
+  text-align: center;
+  margin: 150px;
+}
+
+.projects h3 {
+  font-size: 40px;
+  flex: 1;
+}
+
+.projects img {
+  flex: 1;
+  max-width: 350px;
+  border-radius: 5px;
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.projects h3, b {
+  width: 100%;
+  text-align: center;
+}
+
+.projects b {
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 50px;
+  color: var(--txt-color);
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 250px;
+  text-align: center;
+  padding-bottom: 150px;
+  font-weight: 100;
+}
+
+.contact-form {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 200px;
+}
+
+.contact-form label {
+  color: var(--txt-color);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: rgba(122, 122, 122, 0.5);
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: var(--txt-color);
+  cursor: text;
+  border-radius: 5px;
+}
+
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: var(--highlight-color);
+  color: var(--txt-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form button:hover {
+  background-color: #5d9bff;
+}
+
+.contact-form h3 {
+  font-size: 50px;
+  color: var(--txt-color);
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 250px;
+  text-align: center;
+  padding-bottom: 150px;
+  font-weight: 100;
+}
+
+.references {
+  background-color: var(--bg-color);
+  padding: 50px;
+}
+
+.reference-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.reference-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.reference-details {
+  color: var(--txt-color);
+}
+
+.reference-details h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.reference-details p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--txt-color);
+}
+
+#references {
+  scroll-margin: -500px;
+}
+
+#contact {
+  scroll-margin: -500px;
+}
